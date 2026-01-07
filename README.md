@@ -21,7 +21,7 @@ Binary Classification: A sigmoid-based output layer optimized for two-class segm
 Visualization Tools: Functions to overlay predicted masks onto original images for qualitative analysis.
 
 Model Architecture
-The U-Net design is centered around a "contracting" path to capture context and a "symmetric expanding" path to enable precise localization. This is achieved through the following stages:
+The U-Net design is centered around a "contracting" path to capture context and a "symmetric expanding" path to enable precise localization. This structure consists of the following stages:
 
 Encoder (Downsampling): Sequential convolution and max-pooling layers that reduce spatial dimensions while increasing feature depth.
 
@@ -29,12 +29,12 @@ Bottleneck: The deepest layer of the network where the most abstract feature rep
 
 Decoder (Upsampling): Transposed convolutions that restore spatial resolution.
 
-Skip Connections: Direct links between the encoder and decoder that preserve high-resolution spatial information, which is often lost during downsampling.
+Skip Connections: Direct links between the encoder and decoder that preserve high-resolution spatial information which is typically lost during downsampling.
 
-Output Layer: A final 1x1 convolution with a sigmoid activation function to produce the probability map.
+Output Layer: A final 1×1 convolution with a sigmoid activation function to produce the probability map.
 
-Dataset Organization
-To ensure the model trains effectively, the data must be structured so that each input image corresponds directly to a ground-truth mask. The recommended directory structure is as follows:
+Dataset Structure
+To ensure the model trains effectively, the data must be organized so that each input image corresponds directly to a ground-truth mask. The recommended directory structure is as follows:
 
 Directory	Content Description
 /images	Original input files (e.g., RGB photographs)
