@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.venv/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model files (büyük olabilir)
+*.h5
+*.keras
+
+# Data (dataset büyük olur)
+Semantic segmentation dataset/
+data/
+datasets/
